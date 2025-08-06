@@ -1,0 +1,25 @@
+<nav
+  class="bg-[#0a192f] transition-all duration-300 z-40 sticky top-0 w-full px-10 py-5 flex flex-row items-center justify-between text-white"
+>
+  <div class="text-[25px] font-bold cursor-pointer">
+    <img
+      src="assets/logo.png"
+      class="hover:scale-110 transition-all duration-300"
+      alt=""
+      srcset=""
+    />
+  </div>
+  <div class="hidden lg:flex flex-row items-center">
+    <li class="flex flex-row items-center gap-10 text-[#8892b0]">
+      @for (item of links; track $index) {
+        <ol
+          class="text-[17px] relative pb-1 flex gap-2 cursor-pointer hover:text-[#7fffd4] after:absolute after:left-0 after:bottom-0 after:rounded-[25px] after:h-[4px] after:w-0 after:bg-[#7fffd4] after:transition-all after:duration-300 hover:after:w-2/3"
+        >
+          <a [href]="item.target">
+            {{ item.name }}
+          </a>
+        </ol>
+      }
+    </li>
+  </div>
+</nav>
